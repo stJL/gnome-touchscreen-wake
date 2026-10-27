@@ -114,6 +114,14 @@ for f in /sys/class/input/event*/device/name; do printf '%s: ' "$f"; cat "$f"; d
 
 程式會讀取觸控事件並建立虛擬輸入裝置，不會存取網路或傳送資料。udev 規則只針對指定名稱的觸控裝置及 `/dev/uinput`，使用 `uaccess`，而不是將使用者加入權限更廣的 `input` 群組。請在其他系統使用前先審閱程式碼與權限。
 
+## 開發協作與 AI 協助
+
+本專案在專案維護者與 OpenAI 的 ChatGPT 協助下完成。ChatGPT 協助研究可行的技術方案、撰寫與除錯 Python 主程式及相關設定／安裝腳本，並整理專案文件。
+
+專案維護者提出問題與需求、提供硬體和系統資訊、在實體 ASUS T101HA 上執行指令與測試、回報錯誤及實際觀察結果，並驗證觸控喚醒與 GNOME 的 60 秒自動熄屏能在上述測試環境中正常共存。這段說明是為了透明揭露 AI 輔助開發的過程，並不表示所有程式碼都是由維護者獨立編寫。
+
+目前只在上方描述的單一環境完成實機驗證。其他使用者請先審閱原始碼，並在自己的設備上調整及測試。OpenAI 與 ChatGPT 並非本 repository 的維護者，也不代表其認可或背書本專案。
+
 ## 參考資料
 
 - [Linux 核心：uinput 模組](https://docs.kernel.org/input/uinput.html)

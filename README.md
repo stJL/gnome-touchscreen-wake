@@ -114,6 +114,14 @@ It stops the user's running helper when found, removes the autostart entry and i
 
 The helper reads touch events and creates a virtual input device. It does not access the network or send data anywhere. The udev rule is specific to the named touchscreen plus `/dev/uinput`; it uses `uaccess` rather than adding the user to the broad `input` group. Review the code and permissions before running it on another system.
 
+## Development and AI assistance
+
+This project was developed with substantial assistance from OpenAI's ChatGPT. ChatGPT helped investigate possible approaches, draft and debug the Python helper and supporting configuration/scripts, and prepare the documentation.
+
+The project maintainer identified the problem and requirements, supplied device and system details, ran the commands and tests on a physical ASUS T101HA, reported errors and observed behavior, and verified that touchscreen wake and GNOME's 60-second automatic blanking worked together on the tested setup. This disclosure is intended to be transparent about the AI-assisted development process; it is not a claim that the maintainer independently wrote every line of code.
+
+The project has been validated on the single setup described above. Review the source and adapt/test it before using it on another system. OpenAI and ChatGPT are not maintainers of, and do not endorse, this repository.
+
 ## References
 
 - [Linux kernel: uinput module](https://docs.kernel.org/input/uinput.html)
