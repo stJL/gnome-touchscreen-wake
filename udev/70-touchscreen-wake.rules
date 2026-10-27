@@ -1,0 +1,4 @@
+# Grant the active local user's session access to this touchscreen and uinput.
+# The touchscreen name matches the ASUS T101HA device tested by this project.
+SUBSYSTEM=="input", KERNEL=="event*", ATTRS{name}=="SIS0457:00 0457:11ED", TAG+="uaccess"
+SUBSYSTEM=="misc", KERNEL=="uinput", TAG+="uaccess"

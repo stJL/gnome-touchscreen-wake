@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Touchscreen Wake
+Comment=Wake the display when the touchscreen is tapped
+Exec="@EXEC_PATH@"
+Terminal=false
+X-GNOME-Autostart-enabled=true
